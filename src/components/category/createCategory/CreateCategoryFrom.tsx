@@ -38,9 +38,9 @@ const CreateCategoryFrom: FC<TCreateCategoryForm> = ({visible, setVisible, creat
     })
 
     const createCategoryHandler: SubmitHandler<CreateCategoryInterface> = (data) => {
-        if(choseCategoryCreateSelect.parent) {
+        if (choseCategoryCreateSelect.parent) {
             createCategory(data, choseCategoryCreateSelect)
-        }else {
+        } else {
             createCategory(data)
         }
 

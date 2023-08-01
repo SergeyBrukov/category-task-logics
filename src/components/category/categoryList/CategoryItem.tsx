@@ -26,9 +26,6 @@ const CategoryItem: FC<ICategoryItem> = ({categoryData, className, handleDeleteC
                 <p className={styles.title}>Some action</p>
                 <ul className={styles.sci}>
                     <li>
-                        <AiTwotoneEdit />
-                    </li>
-                    <li>
                         <AiFillDelete onClick={() => handleDeleteCategory(id, type)}/>
                     </li>
                 </ul>
