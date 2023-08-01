@@ -1,0 +1,131 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 2rem;
+  background-color: #171717;
+  border-radius: 20px;
+  .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin: 1em;
+  color: rgb(0, 255, 200);
+  font-size: 1.2em;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.inputField {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: rgb(0, 255, 200);
+  resize: none;
+}
+
+.button1 {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  &:hover {
+    background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
+    color: rgb(0, 255, 200);
+  }
+}
+
+.button2 {
+  padding: 0.5em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  &:hover {
+    background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
+    color: rgb(0, 255, 200);
+  }
+}
+
+.createFormWrapperHidden {
+  display: none;
+}
+
+
+.createFormWrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255 255 255 / 55%);
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.card {
+  max-width: 550px;
+  width: 100%;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 22px;
+  transition: all .3s;
+  &:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  }
+}
+
+
+
+.card2 {
+  border-radius: 0;
+  transition: all .2s;
+  &:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+}
+
+.error {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  font-size: 13px;
+  color: #d52b2b;
+}
