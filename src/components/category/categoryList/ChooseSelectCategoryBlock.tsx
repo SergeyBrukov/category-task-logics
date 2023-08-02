@@ -33,7 +33,7 @@ const ChooseCategorySelectBlock: FC<IChooseCategorySelectBlock> = ({
         >
           <option value="">Choose main category</option>
           {categoryList.map(category => (
-            <option value={category.id}>{category.title}</option>
+            <option value={category.id} key={category.id}>{category.title}</option>
           ))}
         </select>
       </div>
@@ -46,7 +46,7 @@ const ChooseCategorySelectBlock: FC<IChooseCategorySelectBlock> = ({
         >
           <option value="">Choose main category</option>
           {subCategoryParentMemo.subCategory.map(category => (
-            <option value={category.id}>{category.title}</option>
+            <option key={category.id} value={category.id}>{category.title}</option>
           ))}
         </select>
       </div>}
@@ -59,7 +59,7 @@ const ChooseCategorySelectBlock: FC<IChooseCategorySelectBlock> = ({
         >
           <option value="">Choose main category</option>
           {subCategoryTypeTwoMemo.subCategory.map(category => (
-            <option value={category.id}>{category.title}</option>
+            <option key={category.id} value={category.id}>{category.title}</option>
           ))}
         </select>
       </div>}

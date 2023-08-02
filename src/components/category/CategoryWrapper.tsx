@@ -37,10 +37,6 @@ const CategoryWrapper = () => {
 
   const handleCreateSubCategory = (dataCategory: CreateCategoryInterface, choseCategoryCreateSelect: ChoseCategoryCreateSelectType) => {
 
-    if (examinationExistTitle(categoryList, dataCategory.title)) {
-      return alert(`This ${dataCategory.title} already exist`);
-    }
-
     if (choseCategoryCreateSelect.parent && !choseCategoryCreateSelect.subCategory) {
       const newCategory = {
         id,
@@ -92,7 +88,11 @@ const CategoryWrapper = () => {
     alert(`Successfuly create ${dataCategory.title}`);
   };
 
-  const createCategory = (dataCategory: any, choseCategoryCreateSelect?: ChoseCategoryCreateSelectType) => {
+  const createCategory = (dataCategory: CreateCategoryInterface, choseCategoryCreateSelect?: ChoseCategoryCreateSelectType) => {
+    if (examinationExistTitle<CategoriesInterface>(categoryList, dataCategory.title)) {
+      return alert(`This ${dataCategory.title} already exist`);
+    }
+
     if (choseCategoryCreateSelect) {
       return handleCreateSubCategory(dataCategory, choseCategoryCreateSelect);
     }
@@ -103,6 +103,9 @@ const CategoryWrapper = () => {
       ...dataCategory
     };
     setCategoryList(prev => [...prev, newData]);
+
+    alert(`Successfuly create ${dataCategory.title}`);
+
   };
 
   return (
